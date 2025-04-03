@@ -45,7 +45,7 @@ RUN set -x \
       | sort -u) \
  && wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.2/v2ray-plugin-linux-amd64-v1.3.2.tar.gz \
  && tar -xvf v2ray-plugin-linux-amd64-v1.3.2.tar.gz \
- && mv v2ray-plugin /usr/local/bin/ \
+ && mv v2ray-plugin_linux_amd64 /usr/local/bin/v2ray-plugin \
  && chmod +x /usr/local/bin/v2ray-plugin \
  && rm -rf v2ray-plugin* \
  && rm -rf /tmp/repo
