@@ -47,7 +47,7 @@ RUN set -x \
  && tar -xvf v2ray-plugin-linux-amd64-v1.3.2.tar.gz \
  && mv v2ray-plugin_linux_amd64 /usr/local/bin/v2ray-plugin \
  && chmod +x /usr/local/bin/v2ray-plugin \
- && rm -rf v2ray-plugin* \
+ && rm -rf v2ray-plugin-linux-amd64-v1.3.2.tar.gz \
  && rm -rf /tmp/repo
 
 COPY ./docker/alpine/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
