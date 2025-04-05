@@ -43,11 +43,11 @@ RUN set -x \
       $(scanelf --needed --nobanner /usr/local/bin/ss-* \
       | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }' \
       | sort -u) \
- && wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.2/v2ray-plugin-linux-amd64-v1.3.2.tar.gz \
- && tar -xvf v2ray-plugin-linux-amd64-v1.3.2.tar.gz \
+ && wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.1/v2ray-plugin-linux-amd64-v1.3.1.tar.gz \
+ && tar -xvf v2ray-plugin-linux-amd64-v1.3.1.tar.gz \
  && mv v2ray-plugin_linux_amd64 /usr/local/bin/v2ray-plugin \
  && chmod +x /usr/local/bin/v2ray-plugin \
- && rm -rf v2ray-plugin-linux-amd64-v1.3.2.tar.gz \
+ && rm -rf v2ray-plugin-linux-amd64-v1.3.1.tar.gz \
  && rm -rf /tmp/repo
 
 COPY ./docker/alpine/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
